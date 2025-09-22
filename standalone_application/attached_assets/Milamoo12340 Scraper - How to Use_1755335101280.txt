@@ -1,0 +1,141 @@
+# Milamoo12340 Scraper: How to Use
+
+This guide explains how to use the Roblox data extraction tools provided.
+
+## AutoHotkey Version (Windows Only)
+
+### Setup
+1. Download and install AutoHotkey from https://www.autohotkey.com/ if you don't have it already
+2. Double-click either RobloxGameScraper.ahk or RobloxIDScraper.ahk to run
+
+### RobloxGameScraper.ahk
+A focused tool for extracting detailed information about Roblox games.
+
+1. Enter a Roblox game URL in the text field
+   Example: https://www.roblox.com/games/119454325063278/Pet-Simulator-99-Farming
+2. Click "Scrape Info" to analyze the game
+3. View comprehensive information including:
+   - Game/Place ID and Universe ID
+   - Creator details
+   - Current player count and visit statistics
+   - Private server status
+   - Alternative access links
+4. Click "Save Results" to save the information to a file
+5. Click "Clear Results" to start a new scan
+
+### RobloxIDScraper.ahk
+A versatile tool that can extract all types of Roblox IDs.
+
+1. Enter a Roblox URL or raw ID in the text field
+2. Click "Scrape ID" to analyze it
+3. The tool will automatically determine the ID type (game, user, group, asset)
+4. You can also click "From Clipboard" to scan copied text for multiple IDs at once
+5. Review detailed information for each ID found
+6. Click "Save Log" to save all extracted information
+
+## Python Version (Windows, Mac, Linux)
+
+### Setup
+1. Make sure you have Python 3.6 or higher installed
+2. Install required packages:
+   ```
+   pip install requests pyperclip
+   ```
+3. Run the script:
+   ```
+   python RobloxScraper.py
+   ```
+
+### Using RobloxScraper.py
+This powerful tool has a graphical interface and works on all platforms.
+
+1. Enter a Roblox URL or ID in the input field
+2. Select which types of content to check using the checkboxes:
+   - Games: Extracts game information, visit counts, etc.
+   - Users: Gets user profile data and created games
+   - Groups: Extracts group information and owned games
+   - Assets: Gets data about Roblox catalog items
+3. Click "Scrape Info" to analyze a single URL or ID
+4. Click "From Clipboard" to scan your clipboard for multiple Roblox IDs
+5. Click "Save Results" to export all findings to a text file
+6. Click "Clear Results" to start fresh
+
+## Advanced Usage Tips
+
+### Finding Specific Information
+
+- For game links, you'll get:
+  * Universe ID (needed for many API calls)
+  * Root Place ID (main game ID)
+  * Creator information
+  * Private server status
+
+- For user profiles:
+  * User ID
+  * Username and display name
+  * Created games list
+  * Account creation date
+
+- For groups:
+  * Group ID
+  * Owner information
+  * Member count
+  * Published games
+
+- For assets:
+  * Asset type and category
+  * Creator information
+  * Sales status and price
+  * Creation date
+
+### How to Get to Private Servers
+
+If you have a specific game ID like 119454325063278, the tool will tell you:
+- If it's a private server of a main game
+- The main game's ID
+- The universe ID
+- Alternative links to access it
+- Whether private servers are enabled for the game
+
+### Decoding Special URLs
+
+The tools can extract IDs from various Roblox URL formats:
+- www.roblox.com/games/ID/NAME
+- www.roblox.com/places/ID
+- www.roblox.com/users/ID/profile
+- www.roblox.com/groups/ID
+- www.roblox.com/catalog/ID
+- www.roblox.com/library/ID
+
+### Saving Your Findings
+
+Both versions allow you to save results to text files with timestamps.
+These files can be used for:
+- Documenting servers and games
+- Tracking creator information
+- Finding alternative access methods
+
+### Best Practices
+
+1. When analyzing game URLs, the tools automatically check if they're private servers
+2. Use "From Clipboard" to quickly scan websites, Discord messages, or other sources containing multiple Roblox links
+3. For private servers, look for the Universe ID and Root Place ID to find the main game
+4. Check the "Access URLs" section for alternative ways to reach the content
+
+## Troubleshooting
+
+If you encounter issues:
+
+- **AutoHotkey Version**:
+  * Make sure AutoHotkey is properly installed
+  * Run as administrator if necessary
+  * Check if Windows Defender or antivirus is blocking network requests
+
+- **Python Version**:
+  * Ensure all dependencies are installed
+  * Check your internet connection
+  * Some Roblox APIs may rate-limit requests after many queries
+
+Remember that these tools use legitimate Roblox APIs to gather information that's generally available through web browsers. Use responsibly and respect Roblox's Terms of Service.
+
+Created by Milamoo12340
